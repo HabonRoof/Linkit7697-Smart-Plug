@@ -225,23 +225,23 @@ void GetSetTime(){
 
 void RTC_Relay(){
       GetSetTime();
-      //Serial.print("Set Time:");
-      //Serial.print(SetHour);
-      //Serial.print(":");
-      //Serial.print(SetMinute);
-      //Serial.print("Duration:");
-      //Serial.println(OpeningTime.value());      
+      Serial.print("Set Time:");
+      Serial.print(SetHour);
+      Serial.print(":");
+      Serial.print(SetMinute);
+      Serial.print("Duration:");
+      Serial.println(OpeningTime.value());      
       LRTC.get();
       NowHour = LRTC.hour();
       NowMinute = LRTC.minute();
-      //Serial.print("  Now:");
-      //Serial.print(NowHour);
-      //Serial.print(":");
-      //Serial.println(NowMinute);
-      //Serial.print("Destination Time ");
-      //Serial.print(DesHour);
-      //Serial.print(":");
-      //Serial.println(DesMinute);
+      Serial.print("  Now:");
+      Serial.print(NowHour);
+      Serial.print(":");
+      Serial.println(NowMinute);
+      Serial.print("Destination Time ");
+      Serial.print(DesHour);
+      Serial.print(":");
+      Serial.println(DesMinute);
       if(NowHour == SetHour && NowMinute == SetMinute){
           digitalWrite(RelayPin,HIGH);
           Serial.println("Relay ON");
