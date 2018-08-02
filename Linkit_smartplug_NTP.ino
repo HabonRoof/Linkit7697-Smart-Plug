@@ -15,7 +15,7 @@
 #define _SSID "Your WiFi SSID"                                                            // Assign AP ssid / password here
 #define _KEY  "Your WiFi password"                                                            
 
-MCSDevice mcs("DD2AJMsb", "D4HNvUCYUu7VzJan");           // Assign device id / key of your test device
+MCSDevice mcs("DeviceID", "DeviceKey");           // Assign device id / key of your test device
 MCSControllerOnOff Relay("Relay");
 MCSDisplayOnOff Relay_State("Relay_State");
 MCSDisplayFloat Voltage("Volt");
